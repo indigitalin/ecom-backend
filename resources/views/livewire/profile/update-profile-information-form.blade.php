@@ -8,7 +8,8 @@ use Livewire\Volt\Component;
 
 new class extends Component
 {
-    public string $name = '';
+    public string $firstname = '';
+    public string $lastname = '';
     public string $email = '';
 
     /**
@@ -16,7 +17,8 @@ new class extends Component
      */
     public function mount(): void
     {
-        $this->name = Auth::user()->name;
+        $this->firstname = Auth::user()->firstname;
+        $this->lastname = Auth::user()->lastname;
         $this->email = Auth::user()->email;
     }
 
@@ -28,8 +30,9 @@ new class extends Component
         $user = Auth::user();
 
         $validated = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($user->id)],
+            'firstname' => ['required', 'string', 'max:128'],
+            'lastname' => ['required', 'string', 'max:128'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:128', Rule::unique(User::class)->ignore($user->id)],
         ]);
 
         $user->fill($validated);
@@ -75,9 +78,15 @@ new class extends Component
 
     <form wire:submit="updateProfileInformation" class="mt-6 space-y-6">
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input wire:model="name" id="name" name="name" type="text" class="mt-1 block w-full" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-label for="firstname" :value="__('First Name')" />
+            <x-text-input wire:model="firstname" id="firstname" name="firstname" type="text" class="mt-1 block w-full" required autofocus autocomplete="firstname" />
+            <x-input-error class="mt-2" :messages="$errors->get('firstname')" />
+        </div>
+
+        <div>
+            <x-input-label for="lastname" :value="__('Last Name')" />
+            <x-text-input wire:model="lastname" id="lastname" name="lastname" type="text" class="mt-1 block w-full" required autofocus autocomplete="lastname" />
+            <x-input-error class="mt-2" :messages="$errors->get('lastname')" />
         </div>
 
         <div>
