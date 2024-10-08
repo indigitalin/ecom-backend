@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('currency')->nullable();
             $table->boolean('status')->default(1)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

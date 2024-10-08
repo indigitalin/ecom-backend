@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('roles', function (Blueprint $table) {
             $table->unique(['name', 'guard_name', 'user_id']);
+            
         });
     }
 
