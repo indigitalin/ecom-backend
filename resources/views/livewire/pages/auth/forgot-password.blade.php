@@ -35,7 +35,7 @@ new #[Layout('layouts.guest')] class extends Component
         session()->flash('status', __($status));
     }
 }; ?>
-
+<div class="w-full sm:max-w-md mt-6 px-6 py-10 bg-white dark:bg-gray-800 shadow-sm overflow-hidden sm:rounded-lg">
 <div>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
@@ -58,4 +58,5 @@ new #[Layout('layouts.guest')] class extends Component
             </x-primary-button>
         </div>
     </form>
+</div>
 </div>

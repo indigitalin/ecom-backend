@@ -68,7 +68,7 @@ new #[Layout('layouts.guest')] class extends Component
         $this->redirectRoute('login', navigate: true);
     }
 }; ?>
-
+<div class="w-full sm:max-w-md mt-6 px-6 py-10 bg-white dark:bg-gray-800 shadow-sm overflow-hidden sm:rounded-lg">
 <div>
     <form wire:submit="resetPassword">
         <!-- Email Address -->
@@ -102,4 +102,5 @@ new #[Layout('layouts.guest')] class extends Component
             </x-primary-button>
         </div>
     </form>
+</div>
 </div>

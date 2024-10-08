@@ -34,7 +34,7 @@ new #[Layout('layouts.guest')] class extends Component
         $this->redirect('/', navigate: true);
     }
 }; ?>
-
+<div class="w-full sm:max-w-md mt-6 px-6 py-10 bg-white dark:bg-gray-800 shadow-sm overflow-hidden sm:rounded-lg">
 <div>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
@@ -55,4 +55,5 @@ new #[Layout('layouts.guest')] class extends Component
             {{ __('Log Out') }}
         </button>
     </div>
+</div>
 </div>
