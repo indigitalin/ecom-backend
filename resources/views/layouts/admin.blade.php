@@ -16,7 +16,7 @@
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <livewire:layout.admin.topbar />
             <livewire:layout.admin.sidebar />
-            <main class="mt-10">
+            <main class="mt-12 dashboard-container sm:ms-64 mx-auto px-3 sm:px-6 lg:px-8">
                 {{ $slot }}
             </main>
         </div>
