@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('popular')->nullable();
             $table->integer('validity')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
