@@ -66,4 +66,8 @@ class User extends Authenticatable
     public function getAvatarUrlAttribute(){
         return ('https://ui-avatars.com/api//?background=5c60f5&color=fff&name='.$this->name);
     }
+
+    public function client(){
+        return $this->hasOne(Client::class);
+    }
 }
