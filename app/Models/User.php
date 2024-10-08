@@ -12,6 +12,16 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * The attributes that are lazy loaded.
+     *
+     * @var array<int, string>
+     */
+    protected $appends = [
+        'name',
+        'avatar_url',
+    ];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -47,5 +57,13 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function getNameAttribute(){
+        return "{$this->firstname} {$this->lastname}";
+    }
+
+    public function getAvatarUrlAttribute(){
+        return ('https://ui-avatars.com/api//?background=5c60f5&color=fff&name='.$this->name);
     }
 }
