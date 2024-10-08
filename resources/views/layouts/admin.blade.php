@@ -23,5 +23,4 @@
             </main>
         </div>
     </body>
-    <script data-navigate-once src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </html>
