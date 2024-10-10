@@ -11,4 +11,6 @@ Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
 
     Route::get('/products', \App\Livewire\Admin\Product::class)->name('products.index');
     Route::get('/users', \App\Livewire\Admin\User::class)->name('users.index');
+    Route::get('/clients', \App\Livewire\Admin\Clients::class)->name('clients.index');
+    
 });
