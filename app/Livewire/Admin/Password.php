@@ -14,12 +14,12 @@ class Password extends Component
     public function rules(): array
     {
         return [
-            'current_password' => ['required', function ($attribute, $value, $fail) {
+            'current_password' => ['bail','required', function ($attribute, $value, $fail) {
                 if (!Hash::check($value, auth()->user()->password)) {
                     $fail('The current password is incorrect.');
                 }
             }],
-            'new_password' => ['required', 'same:confirm_password', new \App\Rules\StrongPassword],
+            'new_password' => ['bail','required', 'same:confirm_password', new \App\Rules\StrongPassword],
             'confirm_password' => 'required',
         ];
     }
