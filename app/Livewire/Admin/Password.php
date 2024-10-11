@@ -34,7 +34,7 @@ class Password extends Component
         $validated = $this->validate();
         $this->reset();
 
-        \Auth::user()->update([
+        auth()->user()->update([
             'password' => Hash::make($validated['new_password']),
         ]);
         \Toaster::success(__("Password has been changed successfully."));
