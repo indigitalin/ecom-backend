@@ -11,6 +11,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
+        @livewire('wire-elements-modal')
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-slate-50 dark:bg-gray-900">
