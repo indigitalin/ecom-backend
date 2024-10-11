@@ -9,7 +9,7 @@ use LivewireUI\Modal\ModalComponent;
 class ProductModal extends ModalComponent
 {
     public ?Product $product = null;
-    public Forms\ProductForm $form;
+    public \App\Livewire\Admin\Products\Forms\ProductForm $form;
 
     public function mount(Product $product = null): void
     {
@@ -29,6 +29,7 @@ class ProductModal extends ModalComponent
 
     public function render(): View
     {
-        return view('livewire.admin.products.product-list');
+   
+        return view('livewire.admin.products.product-modal');
     }
 }

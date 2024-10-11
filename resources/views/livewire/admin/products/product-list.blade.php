@@ -10,7 +10,7 @@
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6 overflow-hidden overflow-x-auto bg-white border-b border-gray-200">
 
-                    <x-primary-button wire:click="$dispatch('openModal', { component: 'product-modal' })" class="mb-4">
+                    <x-primary-button wire:click="$dispatch('openModal', { component: 'admin.products.product-modal' })" class="mb-4">
                         New Product
                     </x-primary-button>
 
@@ -39,7 +39,7 @@
                                             {{ $product->description }}
                                         </td>
                                         <td class="px-6 py-4 text-sm leading-5 text-gray-900 whitespace-no-wrap">
-                                            <x-secondary-button wire:click="$dispatch('openModal', { component: 'product-modal', arguments: { product: {{ $product }} }})">
+                                            <x-secondary-button wire:click="$dispatch('openModal', { component: 'admin.products.product-modal', arguments: { product: {{ $product }} }})">
                                                 Edit
                                             </x-secondary-button>
                                         </td>
@@ -60,3 +60,4 @@
         </div>
     </div>
 </div>
+
