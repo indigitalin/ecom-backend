@@ -1,5 +1,9 @@
 import './bootstrap';
-import 'flowbite'
+// import 'flowbite'
+import '../../vendor/masmerise/livewire-toaster/resources/js'; // 👈
+import './bundle'
+
+// other app stuff...
 
 import { initFlowbite } from 'flowbite';
 

@@ -14,12 +14,12 @@ class Password extends Component
     public function rules(): array
     {
         return [
-            'current_password' => ['required', function ($attribute, $value, $fail) {
+            'current_password' => ['bail','required', function ($attribute, $value, $fail) {
                 if (!Hash::check($value, auth()->user()->password)) {
                     $fail('The current password is incorrect.');
                 }
             }],
-            'new_password' => ['required', 'same:confirm_password', new \App\Rules\StrongPassword],
+            'new_password' => ['bail','required', 'same:confirm_password', new \App\Rules\StrongPassword],
             'confirm_password' => 'required',
         ];
     }
@@ -31,13 +31,13 @@ class Password extends Component
 
     public function update()
     {
-        $this->validate();
+        $validated = $this->validate();
         $this->reset();
 
-        \Auth::user()->update([
-            'password' => Hash::make($this->new_password),
+        auth()->user()->update([
+            'password' => Hash::make($validated['new_password']),
         ]);
-
-        $this->dispatch('success', message: __("Password has been changed successfully."));
+        \Toaster::success(__("Password has been changed successfully."));
+        $this->dispatch('success');
     }
 }

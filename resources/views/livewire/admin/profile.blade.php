@@ -45,10 +45,10 @@
                     </div>
                     <div class="w-full md:w-1/2 p-2"> <!-- Changed from mt-3 to p-2 -->
                         <div class="mt-3">
-                            <x-input-label for="phone" :value="__('Phone number')" />
-                            <x-text-input placeholder="Your phone number" x-mask="(999) 9999-999" wire:model="phone" id="phone" class="block mt-1 w-full"
-                                type="tel" name="phone" required />
-                            <x-input-error :messages="$errors->get('phone')" class="mt-2" />
+                            <x-input-label for="phone_number" :value="__('Phone number')" />
+                            <x-text-input placeholder="Your phone number" x-mask="(999) 9999-999" wire:model="phone_number" id="phone_number" class="block mt-1 w-full"
+                                type="tel" name="phone_number" required />
+                            <x-input-error :messages="$errors->get('phone_number')" class="mt-2" />
                         </div>
                     </div>
                 </div>
