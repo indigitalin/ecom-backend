@@ -19,6 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        class_alias(\Masmerise\Toaster\Toaster::class, 'Toaster');
     }
 }

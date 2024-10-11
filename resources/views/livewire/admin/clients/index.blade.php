@@ -7,8 +7,8 @@
 
     <div class="flex justify-between mb-4">
         <h2 class="text-xl font-bold">Clients</h2>
-        <button @click="$dispatch('open-modal', '{{ 'client-modal' }}')"
-            class="bg-blue-500 text-white px-4 py-2 rounded">Add Client</button>
+        <x-primary-button @click="$dispatch('open-modal', '{{ 'client-modal' }}')"
+            class="bg-blue-500 text-white px-4 py-2 rounded">Add Client</x-primary-button>
     </div>
 
     <table class="min-w-full bg-white border border-gray-300">

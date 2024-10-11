@@ -31,13 +31,13 @@ class Password extends Component
 
     public function update()
     {
-        $this->validate();
+        $validated = $this->validate();
         $this->reset();
 
         \Auth::user()->update([
-            'password' => Hash::make($this->new_password),
+            'password' => Hash::make($validated['new_password']),
         ]);
-
-        $this->dispatch('success', message: __("Password has been changed successfully."));
+        \Toaster::success(__("Password has been changed successfully."));
+        $this->dispatch('success');
     }
 }
