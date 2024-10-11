@@ -18,7 +18,7 @@ class SuperAdminSeeder extends Seeder
             'email' => 'admin@example.com',
             'password' => '12345678',
             'email_verified_at' => now(),
-            'status' => 1,
+            'status' => '1',
         ]);
     }
 }
