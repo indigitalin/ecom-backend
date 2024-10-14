@@ -1,4 +1,4 @@
-// import './bootstrap';
+import './bootstrap';
 // // import 'flowbite'
 import '../../vendor/masmerise/livewire-toaster/resources/js'; // 👈
 // // import './bundle'
@@ -7,7 +7,7 @@ import '../../vendor/masmerise/livewire-toaster/resources/js'; // 👈
 
 import 'boxicons'
 
-import { initFlowbite } from 'flowbite';
+// import { initFlowbite } from 'flowbite';
 
 // document.addEventListener("livewire:navigating", () => {
 //     initFlowbite();
