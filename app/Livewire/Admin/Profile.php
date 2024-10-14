@@ -52,7 +52,7 @@ class Profile extends Component
     {   $this->prepareValidation();
         $validated = $this->validate();
         auth()->user()->update($validated);
-        \Toaster::success(__("Password has been changed successfully."));
+        \Toaster::success(__("Profile has been updated successfully."));
         $this->dispatch('success');
     }
 }

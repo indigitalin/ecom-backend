@@ -4,7 +4,7 @@
     <!-- SIDEBAR HEADER -->
     <div class="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <a href="/" class="text-white text-2xl flex items-center">
-            <box-icon color="white" name='store-alt' class="bo"></box-icon> <span class="ms-2
+            <box-icon color="white" name='store-alt'></box-icon> <span class="ms-2
             ">Estore</span>
         </a>
 
