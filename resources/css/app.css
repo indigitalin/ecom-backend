@@ -1,6 +1,7 @@
 @import './theme.css';
 @import './style.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+/* @import 'boxicons'; */
 
 @tailwind base;
 @tailwind components;

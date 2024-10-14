@@ -5,6 +5,8 @@ import '../../vendor/masmerise/livewire-toaster/resources/js'; // 👈
 
 // other app stuff...
 
+import 'boxicons'
+
 import { initFlowbite } from 'flowbite';
 
 document.addEventListener("livewire:navigating", () => {
